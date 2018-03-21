@@ -15,7 +15,7 @@
 <meta property="og:url" content="http://xaor.cf/2018/03/21/climb_over_gfw/index.html">
 <meta property="og:site_name" content="Xaor的博客">
 <meta property="og:description" content="工欲善其事，必先利其器，所以谷歌也是必不可少的。废话少说开启上网的hello world。 工具 密码：gy2k 第一：先得有一台国外不受防火墙干扰的主机；第二：安装shadowsocks12345678Debian / Ubuntu:apt-get install python-pip python-m2crypto pip install shadowsocksCentOS:yum insta">
-<meta property="og:updated_time" content="2018-03-21T13:40:29.616Z">
+<meta property="og:updated_time" content="2018-03-21T13:50:08.121Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Climb Over The Wall">
 <meta name="twitter:description" content="工欲善其事，必先利其器，所以谷歌也是必不可少的。废话少说开启上网的hello world。 工具 密码：gy2k 第一：先得有一台国外不受防火墙干扰的主机；第二：安装shadowsocks12345678Debian / Ubuntu:apt-get install python-pip python-m2crypto pip install shadowsocksCentOS:yum insta">
@@ -175,7 +175,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>工欲善其事，必先利其器，所以<a href="https://www.google.com" target="_blank" rel="noopener">谷歌</a>也是必不可少的。废话少说开启上网的hello world。</p>
-<p><a href="链接：https://pan.baidu.com/s/1VN1EcIyEhiXis4ZINSuhnQ">工具</a> 密码：gy2k</p>
+<p><a href="https://pan.baidu.com/s/1VN1EcIyEhiXis4ZINSuhnQ" target="_blank" rel="noopener">工具</a> 密码：gy2k</p>
 <h3 id="第一：先得有一台国外不受防火墙干扰的主机；"><a href="#第一：先得有一台国外不受防火墙干扰的主机；" class="headerlink" title="第一：先得有一台国外不受防火墙干扰的主机；"></a>第一：先得有一台国外不受防火墙干扰的主机；</h3><h3 id="第二：安装shadowsocks"><a href="#第二：安装shadowsocks" class="headerlink" title="第二：安装shadowsocks"></a>第二：安装shadowsocks</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Debian / Ubuntu:</span><br><span class="line">apt-get install python-pip python-m2crypto </span><br><span class="line">pip install shadowsocks</span><br><span class="line"></span><br><span class="line">CentOS:</span><br><span class="line">yum install m2crypto python-setuptools </span><br><span class="line">easy_install pip </span><br><span class="line">pip install shadowsocks</span><br></pre></td></tr></table></figure>
 <h3 id="第三：配置"><a href="#第三：配置" class="headerlink" title="第三：配置"></a>第三：配置</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/shadowsocks.json:</span><br><span class="line">&#123; </span><br><span class="line"><span class="string">"server"</span>:<span class="string">"服务器 IP 地址"</span>, </span><br><span class="line"><span class="string">"server_port"</span>:8388, </span><br><span class="line"><span class="string">"local_address"</span>: <span class="string">"127.0.0.1"</span>, </span><br><span class="line"><span class="string">"local_port"</span>:1080, </span><br><span class="line"><span class="string">"password"</span>:<span class="string">"mypassword"</span>, </span><br><span class="line"><span class="string">"timeout"</span>:300, </span><br><span class="line"><span class="string">"method"</span>:<span class="string">"aes-256-cfb"</span>, </span><br><span class="line"><span class="string">"fast_open"</span>: <span class="literal">false</span>, </span><br><span class="line"><span class="string">"workers"</span>: 1 </span><br><span class="line">&#125;</span><br><span class="line">配置说明</span><br><span class="line">server 服务端监听的地址，服务端可填写 0.0.0.0 </span><br><span class="line">server_port 服务端的端口 </span><br><span class="line">local_address 本地端监听的地址 </span><br><span class="line">local_port 本地端的端口 </span><br><span class="line">password 用于加密的密码 </span><br><span class="line">timeout 超时时间，单位秒 </span><br><span class="line">method 加密方法，推荐 <span class="string">"aes-256-cfb"</span> </span><br><span class="line">fast_open 是否使用 TCP_FASTOPEN, <span class="literal">true</span> / <span class="literal">false</span> </span><br><span class="line">workers worker 数量，Unix/Linux 可用，如果不理解含义请不要改</span><br></pre></td></tr></table></figure>
 <h3 id="后台运行："><a href="#后台运行：" class="headerlink" title="后台运行："></a>后台运行：</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssserver -c /etc/shadowsocks.json &amp;</span><br></pre></td></tr></table></figure>
@@ -425,19 +425,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">设计</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">杂谈</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">利器</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">翻墙</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">设计</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">杂谈</a>
               </li>
             
             <div class="clearfix"></div>
